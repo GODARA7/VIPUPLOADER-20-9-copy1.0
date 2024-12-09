@@ -49,7 +49,7 @@ bot = Client("bot",
 )
 
 @bot.on_message(filters.command(["start"]))
-async def start_command(bot, message):
+async def account_login(bot: Client, m: Message):
      chat_id = message.chat.id
      await send_random_photo(bot, chat_id)
 async def send_random_photo(bot, chat_id):
