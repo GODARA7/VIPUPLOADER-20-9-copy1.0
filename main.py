@@ -50,13 +50,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-     chat_id = message.chat.id
-     await send_random_photo(bot, chat_id)
-async def send_random_photo(bot, chat_id):
-     width = random.randint(1100, 1250)
-     height = random.randint(600, 800)
-     await bot.send_photo(
-         chat_id=-1002346307729,
+     await m.reply_photo(
          photo=f"https://picsum.photos/{width}/{height}.jpg",
          caption=f"𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 🌟 𝐈 AM UPLOADER BOT 🕹️ \n\n➠ 📛 Can Extract Videos & Pdf Form Your Text File and Upload to Telegram \n\n➠ 🍁 𝐔𝐬𝐞 /tarain 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐅𝐫𝐨𝐦 𝐓𝐗𝐓 𝐅𝐢𝐥𝐞 \n\nFor Stop ⛔ working process ➡️ /stop  \n\n<pre>➠ 💗 𝐌𝐚𝐝𝐞 𝐁𝐲: 🔰 『𝐓𝐇𝐄𝐑𝐌𝐎𝐏𝐎𝐋𝐘™ 🥷🐦‍🔥』 🌎</pre>\n-═════━‧₊˚❀༉‧₊˚.━═════-\n",
          reply_markup=keyboard
